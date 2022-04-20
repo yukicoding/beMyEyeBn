@@ -4,7 +4,8 @@ public class User {
     private Integer id;
     private String userName;
     private String password;
-    private String realName;
+    private String userSex;
+    private String nickName;
 
     public Integer getId() {
         return id;
@@ -30,12 +31,20 @@ public class User {
         this.password = password;
     }
 
-    public String getRealName() {
-        return realName;
+    public String getUserSex() {
+        return userSex;
     }
 
-    public void setRealName(String realName) {
-        this.realName = realName;
+    public void setUserSex(String userSex) {
+        this.userSex = userSex;
+    }
+
+    public String getNickName() {
+        return nickName;
+    }
+
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
     }
 
     @Override
@@ -44,7 +53,8 @@ public class User {
                 "id=" + id +
                 ", userName='" + userName + '\'' +
                 ", password='" + password + '\'' +
-                ", realName='" + realName + '\'' +
+                ", userSex='" + userSex + '\'' +
+                ", nickName='" + nickName + '\'' +
                 '}';
     }
 }
