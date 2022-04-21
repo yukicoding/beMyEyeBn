@@ -1,10 +1,7 @@
 package com.daniel.bemyeyebn.mapper;
 
 import com.daniel.bemyeyebn.model.User;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Result;
-import org.apache.ibatis.annotations.Results;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -24,4 +21,6 @@ public interface UserMapper {
     @Insert("INSERT INTO users  (userName,password,user_sex,nick_name) VALUES (#{userName},#{password},#{userSex},#{nickName})")
     void insert(User user);
 
+    @Delete("DELETE FROM users WHERE id = #{id}")
+    void delete(Long id);
 }

@@ -4,6 +4,7 @@ package com.daniel.bemyeyebn.controller;
 import com.daniel.bemyeyebn.model.User;
 import com.daniel.bemyeyebn.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -34,5 +35,8 @@ public class UserController {
         user.setNickName(nickName);
         userService.insertUser(user);
     }
-
+    @RequestMapping("/deleteUser/{id}")
+    public void deleteUser(@PathVariable(name = "id") Long id){
+        userService.deleteUser(id);
+    }
 }
