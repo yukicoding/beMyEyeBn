@@ -14,10 +14,16 @@ public class UserService {
     public List<User> getAllUser(){
         return userMapper.getAllUser();
     }
-    public void insertUser(User user){
-         userMapper.insert(user);
+    public Integer addUser(User user){
+        return userMapper.InsertUser(user);
     }
-    public void deleteUser(Long id){
-        userMapper.delete(id);
+    public User getUser(String id){
+        return userMapper.getUser(id);
+    }
+    public Integer updateUser(User user){
+        return userMapper.putUser(user);
+    }
+    public Long deleteUser(String id){
+        return userMapper.delete(id);
     }
 }
