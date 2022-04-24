@@ -6,6 +6,7 @@ import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
 import java.util.List;
 
 @RestController
@@ -14,7 +15,7 @@ public class UserController {
   @Autowired UserService userService;
 
   @GetMapping("")
-  public List<User> getAllUser() {
+  public List<User> getAllUser() throws Exception{
     return userService.getAllUser();
   }
 
