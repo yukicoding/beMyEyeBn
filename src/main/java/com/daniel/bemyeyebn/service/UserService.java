@@ -28,7 +28,6 @@ public class UserService {
 
         String result = HttpRequest.get("https://geoapi.qweather.com/v2/city/top?key=33da32fe2ab241e0ab87f0099349e15c")
                 .header("Content-Type","application/x-www-form-urlencoded;charset=UTF-8").execute().body();
-    System.out.println(result);
 
         return userMapper.getAllUser();
     }
